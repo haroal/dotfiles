@@ -25,6 +25,7 @@ following the [instruction on the Github wiki](https://github.com/Airblader/i3/w
  - **dunst**: to have better notifications (`sudo apt install dunst`)
  - **blueman**: a Bluetooth manager (`sudo apt install blueman`)
  - **wicd**: a network manager (WiFi)(`sudo apt install wicd`)
+ - **ranger**: a terminal file browser (`sudo apt install ranger`)
 
 ## Configurations
 
@@ -36,4 +37,6 @@ Config files are in the config folder.
  - Modify the polybar config in `~/.config/polybar/config`
  - Modify the dunst config in `~/.config/dunst/dunstrc`
  - Confgure the colors theme in `~/.Xresources`
+ - Copy ranger config files in `~/.config/ranger/`
+ - Copy `~/.Xdefaults` to enable urxvt extensions (ie. matcher to make links clickable)
  

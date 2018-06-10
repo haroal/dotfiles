@@ -1,0 +1,4 @@
+! Enable clickable links in urxvt
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      firefox
+URxvt.matcher.button:   2
