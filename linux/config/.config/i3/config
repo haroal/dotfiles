@@ -24,7 +24,7 @@ client.placeholder      $background $background $foreground    #000000   $inacti
 client.background       $background
 
 # wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 # misc
 for_window [class=".*"] border pixel 2
