@@ -68,3 +68,8 @@ $ pip3 install virtualfish
 `sudo apt install wireshark`
 
 **Important**: Log in and log out to enable the new "wireshark" group for current user, to run wireshark without sudo.
+
+## Other
+
+- shutter (screenshot)
+- qalculate! (calculator)
