@@ -21,7 +21,7 @@ sudo apt install libev libev-dev libsnl-dev pkg-config libstartup-notification0-
 
  - **urxvt**: terminal (`sudo apt install rxvt-unicode`)
  - **rofi**: dmenu replacement to quickly run software (`sudo apt install rofi`)
- - **polybar**: status bar (`sudo apt install polybar`)
+ - **polybar**: status bar (`sudo apt install polybar` from getdeb or from [sources](https://github.com/jaagr/polybar) if not available)
  - **compton**: to manage transparency (`sudo apt install compton`)
  - **feh**: to display a wallpaper (`sudo apt install feh`)
  - **light**: to manage the screen brightness (`sudo apt install light`)
