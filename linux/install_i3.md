@@ -12,6 +12,11 @@ My configuration is highly inspired from the [Grafikart dotfiles](https://github
 To have gaps between windows and some other enhancements, install **i3-gapps** from the sources,
 following the [instruction on the Github wiki](https://github.com/Airblader/i3/wiki/Compiling-&-Installing).
 
+You'll need to have these dependencies installed:
+```
+sudo apt install libev libev-dev libsnl-dev pkg-config libstartup-notification0-dev libstartup-notification0 libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-xinerama0-dev libxcb-util-dev libxcb-cursor-dev libxcb-keysyms1-dev libxcb-icccm4-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libyajl-dev libpcre2-dev libxml2-dev libcairo2-dev libreadline-dev libglib2.0-dev libgsl-dev libgtk-3-dev
+```
+
 ## Softwares to install
 
  - **urxvt**: terminal (`sudo apt install rxvt-unicode`)
