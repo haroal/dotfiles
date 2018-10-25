@@ -58,10 +58,10 @@ $ sudo add-apt-repository ppa:teejee2008/ppa
 $ sudo apt update && sudo apt install ukuu
 
 # To have a list of currently installed kernels
-$ sudo ukuu --list
+$ sudo ukuu --list-installed
 
 # To install the new kernel
-$ sudo ukuu-install v4.16.23
+$ sudo ukuu --install v4.16.23
 
 # To remove the old one
 $ sudo ukuu --remove <old kernel version as written in the list>
