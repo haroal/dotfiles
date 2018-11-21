@@ -32,6 +32,12 @@ sudo apt install libev libev-dev libsnl-dev pkg-config libstartup-notification0-
  - **wicd**: a network manager (WiFi)(`sudo apt install wicd`)
  - **ranger**: a terminal file browser (`sudo apt install ranger`)
 
+*Note: you must edit /etc/NetworkManager/NetworkManager.conf like this to correctly use wicd:*
+```
+[ifupdown]
+managed=true
+```
+
 ## Configurations
 
 Config files are in the config folder.
