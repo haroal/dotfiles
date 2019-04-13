@@ -51,3 +51,8 @@ Config files are in the config folder.
  - Copy ranger config files in `~/.config/ranger/`
  - Copy `~/.Xdefaults` to enable urxvt extensions (ie. matcher to make links clickable)
  
+ If `~/.Xresources` is not loaded on startup, create a `~/.xprofile` file with : 
+ 
+ ```
+ USRRESOURCES=$HOME/.Xresources
+ ```
