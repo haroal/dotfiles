@@ -7,9 +7,9 @@ My configuration is highly inspired from the [Grafikart dotfiles](https://github
 
 - Follow the [installation instruction](https://i3wm.org/docs/repositories.html) to install the latest i3 stable version.
 
-## I3-gapps
+## I3-gaps
 
-To have gaps between windows and some other enhancements, install **i3-gapps** from the sources,
+To have gaps between windows and some other enhancements, install **i3-gaps** from the sources,
 following the [instruction on the Github wiki](https://github.com/Airblader/i3/wiki/Compiling-&-Installing).
 
 You'll need to have these dependencies installed:
