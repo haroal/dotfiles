@@ -1,0 +1,47 @@
+theme = "semi-native"
+icons = "awesome"
+
+[[block]]
+block = "focused_window"
+max_width = 80
+
+[[block]]
+block = "rofication"
+interval = 1
+socket_path = "/tmp/rofi_notification_daemon"
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used}/{mem_total}"
+format_swap = "{swap_used}/{swap_total}"
+
+[[block]]
+block = "custom"
+command = "/home/aanneix/Documents/Scripts/bluetooth-status.sh"
+json = true
+
+[[block]]
+block = "net"
+format = " {ssid}"
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+
+[[block]]
+block = "battery"
+interval = 10
+format = " {percentage}"
+full_format = " {percentage}"
+hide_missing = true
+driver = "sysfs"
+
+[[block]]
+block = "time"
+interval = 1
+format = "%d/%m/%Y %H:%M:%S"
+

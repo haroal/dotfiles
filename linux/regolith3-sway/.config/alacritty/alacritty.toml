@@ -1,0 +1,9 @@
+[font]
+size = 13.0
+
+[scrolling]
+history = 100000
+
+[window.padding]
+x = 15
+y = 15

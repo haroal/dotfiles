@@ -1,0 +1,5 @@
+# Start copyq server (ensuring only one instance is running)
+exec_always --no-startup-id "killall copyq; copyq"
+
+## Open clipboard manager // <><Shift> c ##
+bindsym $mod+Shift+c exec /home/aanneix/Documents/Scripts/clipboard-manager.sh

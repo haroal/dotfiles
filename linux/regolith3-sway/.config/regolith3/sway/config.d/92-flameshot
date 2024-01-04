@@ -1,0 +1,2 @@
+## Screenshot with Flameshot
+bindsym $mod+Print exec /usr/bin/flameshot gui

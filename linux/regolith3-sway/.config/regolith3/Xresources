@@ -1,0 +1,12 @@
+regolith.look.path: /usr/share/regolith-look/lascaille
+# Wallpaper
+regolith.wallpaper.file: /home/aanneix/Pictures/wallpaper.jpg
+# i3status-bar
+wm.bar.position: top
+wm.bar.separatorchar: ""
+wm.bar.status_config: /home/aanneix/.config/regolith3/i3status-rust/config.toml
+# i3-gaps
+wm.gaps.focus_follows_mouse: yes
+# Custom bindings
+wm.binding.settings: s
+wm.binding.reload: Ctrl+Shift+c
