@@ -58,6 +58,7 @@ cp -rv ./.local/bin/* ~/local/bin/
 cp -rv ./.config/alacritty/* ~/.config/alacritty/
 cp -rv ./.config/regolith3/sway/* ~/.config/regolith3/sway/
 cp -v ./.config/regolith3/Xresources ~/.config/regolith3/Xresources
+cp -v ./etc/environment.d/* /etc/environment.d/
 
 echo "Setting permissions on executable files..."
 chmod -v +x ~/Documents/Scripts/*.sh
@@ -66,9 +67,6 @@ chmod -v +x ~/.local/bin/*
 echo "Configure ilia width and height..."
 gsettings set org.regolith-linux.ilia window-width 1000
 gsettings set org.regolith-linux.ilia window-height 800
-
-echo "Editing sway ENV variables to set XDG_CURRENT_DESKTOP..."
-echo -e "# Fix for screensharing and screenshotting\nXDG_CURRENT_DESKTOP=GNOME:sway" | sudo tee -a /etc/regolith/sway/environment > /dev/null
 
 echo "Making fish the default shell..."
 sudo chsh -s $(which fish)
