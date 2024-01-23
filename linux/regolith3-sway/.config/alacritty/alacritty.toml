@@ -1,9 +1,13 @@
 [font]
-size = 13.0
+normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
+size = 12.0
 
 [scrolling]
 history = 100000
 
 [window.padding]
-x = 15
-y = 15
+x = 10
+y = 5
+
+[window]
+dynamic_padding = true

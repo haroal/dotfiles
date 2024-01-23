@@ -13,9 +13,9 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 # Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+	"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+	sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
 echo "Adding fish APT repositories..."
 sudo apt-add-repository ppa:fish-shell/release-3
@@ -29,21 +29,23 @@ sudo apt remove regolith-wm-networkmanager regolith-wm-next-workspace xdg-deskto
 echo "Installing utils..."
 sudo apt install \
 	curl \
-        clang \
-        copyq \
-        fd-find \
+	clang \
+	copyq \
+	fd-find \
 	fish \
-        flameshot \
-        gcc \
-        git \
-        htop \
-        python3 \
-        python3-pip \
-        ranger \
-        ripgrep \
+	flameshot \
+	gcc \
+	git \
+	htop \
+	net-tools \
+	python3 \
+	python3-pip \
+	python3-venv \
+	ranger \
+	ripgrep \
 	slurp \
-        tmux \
-        vlc
+	tmux \
+	vlc
 
 echo "Creating directories..."
 mkdir -vp ~/.local/bin
@@ -91,10 +93,10 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 sudo mkdir -p /usr/local/share/man/man1
 sudo mkdir -p /usr/local/share/man/man5
-scdoc < extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
-scdoc < extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
-scdoc < extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz > /dev/null
-scdoc < extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz > /dev/null
+scdoc <extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz >/dev/null
+scdoc <extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz >/dev/null
+scdoc <extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz >/dev/null
+scdoc <extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz >/dev/null
 mkdir -vp ~/.config/fish/completions
 cp extra/completions/alacritty.fish ~/.config/fish/completions/alacritty.fish
 
