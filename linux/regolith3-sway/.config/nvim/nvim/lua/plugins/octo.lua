@@ -8,7 +8,10 @@ wk.register({
       i = "issue",
       l = "label",
       s = "suggestion",
-      p = "pr",
+      p = {
+        name = "pr",
+        p = "sensible",
+      },
       r = "react",
       v = "reviewer",
       w = "review",
@@ -55,15 +58,15 @@ return {
           },
           pull_request = {
             checkout_pr = { lhs = "<leader>Opo", desc = "checkout PR" },
-            merge_pr = { lhs = "<leader>Opm", desc = "merge commit PR" },
-            squash_and_merge_pr = { lhs = "<leader>Ops", desc = "squash and merge PR" },
+            merge_pr = { lhs = "<leader>Oppm", desc = "merge commit PR" },
+            squash_and_merge_pr = { lhs = "<leader>Opps", desc = "squash and merge PR" },
             list_commits = { lhs = "<leader>Opc", desc = "list PR commits" },
             list_changed_files = { lhs = "<leader>Opf", desc = "list PR changed files" },
             show_pr_diff = { lhs = "<leader>Opd", desc = "show PR diff" },
             add_reviewer = { lhs = "<leader>Ova", desc = "add reviewer" },
             remove_reviewer = { lhs = "<leader>Ovd", desc = "remove reviewer request" },
-            close_issue = { lhs = "<leader>OpC", desc = "close PR" },
-            reopen_issue = { lhs = "<leader>Opo", desc = "reopen PR" },
+            close_issue = { lhs = "<leader>Oppc", desc = "close PR" },
+            reopen_issue = { lhs = "<leader>Oppr", desc = "reopen PR" },
             list_issues = { lhs = "<leader>Oil", desc = "list open issues on same repo" },
             reload = { lhs = "<C-r>", desc = "reload PR" },
             open_in_browser = { lhs = "<C-b>", desc = "open PR in browser" },
@@ -142,7 +145,7 @@ return {
             select_first_entry = { lhs = "[Q", desc = "move to first changed file" },
             select_last_entry = { lhs = "]Q", desc = "move to last changed file" },
             close_review_tab = { lhs = "<ESC>", desc = "close review tab" },
-            toggle_viewed = { lhs = "<leader>Op<space>", desc = "toggle viewer viewed state" },
+            toggle_viewed = { lhs = "<leader>Op<space>", desc = "toggle viewed state" },
           },
         },
       })
@@ -156,15 +159,15 @@ return {
         desc = "PRs to review",
       },
       -- Lists
-      { "<leader>Oh", "<cmd>Octo actions<CR>", desc = "List actions" },
-      { "<leader>Oo", "<cmd>Octo pr list<CR>", desc = "List PRs" },
+      { "<leader>Oh", "<cmd>Octo actions<CR>", desc = "list actions" },
+      { "<leader>Oo", "<cmd>Octo pr list<CR>", desc = "list PRs" },
       -- Pull requests
-      { "<leader>Opk", "<cmd>Octo pr checks<CR>", desc = "Show checks" },
+      { "<leader>OpC", "<cmd>Octo pr checks<CR>", desc = "show checks" },
       -- Review
-      { "<leader>Ows", "<cmd>Octo review start<CR>", desc = "Start review" },
-      { "<leader>Owp", "<cmd>Octo review resume<CR>", desc = "Resume review" },
-      { "<leader>Owq", "<cmd>Octo review close<CR>", desc = "Close review" },
-      { "<leader>OwS", "<cmd>Octo review submit<CR>", desc = "Submit review" },
+      { "<leader>Ows", "<cmd>Octo review start<CR>", desc = "start review" },
+      { "<leader>Owp", "<cmd>Octo review resume<CR>", desc = "resume review" },
+      { "<leader>Owq", "<cmd>Octo review close<CR>", desc = "close review" },
+      { "<leader>OwS", "<cmd>Octo review submit<CR>", desc = "submit review" },
       {
         "<leader>O<space>",
         function()
@@ -172,7 +175,7 @@ return {
           octo_mappings.toggle_viewed()
           octo_mappings.select_next_entry()
         end,
-        desc = "Toggle viewed and go to next file",
+        desc = "toggle viewed and go to next file",
       },
     },
   },

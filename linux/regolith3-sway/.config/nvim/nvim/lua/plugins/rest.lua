@@ -1,7 +1,7 @@
 local wk = require("which-key")
 wk.register({
   ["<leader>"] = {
-    R = { name = "HTTP client" },
+    H = { name = "HTTP client" },
   },
 })
 
@@ -16,12 +16,12 @@ return {
     end,
     keys = {
       {
-        "<leader>Rr",
+        "<leader>Hr",
         "<Plug>RestNvim",
         desc = "Run current HTTP request",
       },
       {
-        "<leader>Rl",
+        "<leader>Hl",
         "<Plug>RestNvimLast",
         desc = "Re-run last HTTP request",
       },

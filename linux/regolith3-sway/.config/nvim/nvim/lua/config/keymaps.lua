@@ -9,6 +9,16 @@ vim.keymap.set("n", "<leader>.", "<cmd>e #<cr>", { desc = "Switch to Other Buffe
 -- Replace word under the cursor + possibly next occurences
 -- See https://vonheikemen.github.io/devlog/tools/how-to-survive-without-multiple-cursors-in-vim/
 vim.keymap.set("n", "<leader>r", "*``cgn", { desc = "Replace current word" })
+vim.keymap.set("v", "<leader>r", '"hy:/<C-r>h<CR>``cgn', { desc = "Replace current word" })
+-- Prepend/append to all occurrences
+vim.keymap.set("n", "<leader>a", ":%s/<C-r><C-w>/&/gc", { desc = "Append/prepend current word" })
+vim.keymap.set("v", "<leader>a", '"hy:%s/<C-r>h/&/gc', { desc = "Append/prepend current word" })
+
+-- Do not yank on paste
+vim.keymap.set("v", "p", [["_dP]], { desc = "Replace with paste" })
+
+-- Move cursor at the end of visual selection after yanking
+vim.keymap.set("v", "y", "<cmd>set lazyredraw<CR>ygv<ESC><cmd>set nolazyredraw<CR>")
 
 -- Center line on search/scrolling to better focus
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -17,8 +27,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Remap increment/decrement number to <M-+>/<M--> to avoid conflicts with <C-a> used by tmux
-vim.keymap.set("n", "g+", "<C-a>", { silent = false, desc = "Increment" })
-vim.keymap.set("n", "g-", "<C-x>", { silent = false, desc = "Decrement" })
+vim.keymap.set({ "n", "v" }, "g+", "<C-a>", { silent = false, desc = "Increment" })
+vim.keymap.set({ "n", "v" }, "g-", "<C-x>", { silent = false, desc = "Decrement" })
+vim.keymap.set("v", "g/", "g<C-a>", { silent = false, desc = "Increment sequence" })
+vim.keymap.set("v", "g\\", "g<C-x>", { silent = false, desc = "Decrement sequence" })
 
 -- Lazydocker in floating terminal (like lazygit as provided by LazyVim)
 local Util = require("lazyvim.util")
@@ -47,12 +59,7 @@ cmp.setup({
       i = function()
         if cmp.visible() then
           cmp.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })
-        end
-      end,
-    }),
-    ["<C-Space>"] = cmp.mapping({
-      i = function()
-        if not cmp.visible() then
+        else
           cmp.complete()
         end
       end,
