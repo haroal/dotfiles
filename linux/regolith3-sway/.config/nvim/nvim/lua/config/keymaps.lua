@@ -2,14 +2,14 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- "Switch to other buffer" remapped from <leader>` to <leader>. because of dead keys
+-- "Switch to other buffer" remapped from "<leader>`" to "<leader>." because of dead keys
 vim.keymap.del("n", "<leader>`")
 vim.keymap.set("n", "<leader>.", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
--- Replace word under the cursor + possibly next occurences
+-- Replace word under the cursor + possibly next occurrences
 -- See https://vonheikemen.github.io/devlog/tools/how-to-survive-without-multiple-cursors-in-vim/
 vim.keymap.set("n", "<leader>r", "*``cgn", { desc = "Replace current word" })
-vim.keymap.set("v", "<leader>r", '"hy:/<C-r>h<CR>``cgn', { desc = "Replace current word" })
+vim.keymap.set("v", "<leader>r", '"hy/<C-r>h<CR>``cgn', { desc = "Replace current word" })
 -- Prepend/append to all occurrences
 vim.keymap.set("n", "<leader>a", ":%s/<C-r><C-w>/&/gc", { desc = "Append/prepend current word" })
 vim.keymap.set("v", "<leader>a", '"hy:%s/<C-r>h/&/gc', { desc = "Append/prepend current word" })
@@ -31,6 +31,10 @@ vim.keymap.set({ "n", "v" }, "g+", "<C-a>", { silent = false, desc = "Increment"
 vim.keymap.set({ "n", "v" }, "g-", "<C-x>", { silent = false, desc = "Decrement" })
 vim.keymap.set("v", "g/", "g<C-a>", { silent = false, desc = "Increment sequence" })
 vim.keymap.set("v", "g\\", "g<C-x>", { silent = false, desc = "Decrement sequence" })
+
+-- Keymaps to copy current file path in clipboard
+vim.keymap.set("n", "<leader>fp", "<cmd>let @*=expand('%:.')<CR>", { desc = "Copy relative path" })
+vim.keymap.set("n", "<leader>fP", "<cmd>let @*=expand('%:p')<CR>", { desc = "Copy absolute path" })
 
 -- Lazydocker in floating terminal (like lazygit as provided by LazyVim)
 local Util = require("lazyvim.util")

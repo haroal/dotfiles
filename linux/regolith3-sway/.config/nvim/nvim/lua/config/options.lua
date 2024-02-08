@@ -4,7 +4,6 @@
 
 -- Python binary for neovim
 vim.g.python3_host_prog = "~/.virtualenvs/nvim/bin/python3"
-
 -- Wrap to fit into window by default
 vim.opt.wrap = true
 vim.opt.linebreak = true
