@@ -9,3 +9,5 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 -- Enable spelling by default
 vim.opt.spell = true
+-- Disable clipboard sharing
+vim.opt.clipboard = ""

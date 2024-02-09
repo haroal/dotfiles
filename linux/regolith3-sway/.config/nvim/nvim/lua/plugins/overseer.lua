@@ -32,7 +32,7 @@ end
 
 return {
   {
-    "stevearc/overseer.nvim",
+    "haroal/overseer.nvim",
     opts = {
       task_list = {
         max_width = { 300, 0.25 },
@@ -57,7 +57,7 @@ return {
     optional = true,
     dependencies = {
       "nvim-neotest/neotest-python",
-      "stevearc/overseer.nvim",
+      "haroal/overseer.nvim",
     },
     opts = function(opts)
       opts = opts or {}

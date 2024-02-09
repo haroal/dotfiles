@@ -8,12 +8,11 @@ wk.register({
 return {
   {
     "rest-nvim/rest.nvim",
+    lazy = true,
     dependencies = { { "nvim-lua/plenary.nvim" } },
-    config = function()
-      require("rest-nvim").setup({
-        skip_ssl_verification = true,
-      })
-    end,
+    opts = {
+      skip_ssl_verification = true,
+    },
     keys = {
       {
         "<leader>Hr",
