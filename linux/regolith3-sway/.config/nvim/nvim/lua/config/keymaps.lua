@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>a", ":%s/<C-r><C-w>/&/gc", { desc = "Append/prepend
 vim.keymap.set("v", "<leader>a", '"hy:%s/<C-r>h/&/gc', { desc = "Append/prepend current word" })
 
 -- Do not yank on paste
--- vim.keymap.set("v", "p", [["_dP]], { desc = "Replace with paste" })
+vim.keymap.set("v", "p", [["_dP]], { desc = "Replace with paste" })
 -- Copy/paste to/from system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system clipboard" })

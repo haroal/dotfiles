@@ -92,6 +92,8 @@ return {
           react_rocket = { lhs = "<leader>Grr", desc = "add/remove 🚀 reaction" },
           react_laugh = { lhs = "<leader>Grl", desc = "add/remove 😄 reaction" },
           react_confused = { lhs = "<leader>Grc", desc = "add/remove 😕 reaction" },
+          review_start = { lhs = "<leader>Gws", desc = "start a review for the current PR" },
+          review_resume = { lhs = "<leader>Gwr", desc = "resume a pending review for the current PR" },
         },
         review_thread = {
           goto_issue = { lhs = "<leader>Gig", desc = "navigate to a local repo issue" },
@@ -121,6 +123,8 @@ return {
           close_review_tab = { lhs = "<ESC>", desc = "close review tab" },
         },
         review_diff = {
+          submit_review = { lhs = "<leader>GwS", desc = "submit review" },
+          discard_review = { lhs = "<leader>Gwd", desc = "discard review" },
           add_review_comment = { lhs = "<leader>Gca", desc = "add a new review comment" },
           add_review_suggestion = { lhs = "<leader>Gsa", desc = "add a new review suggestion" },
           focus_files = { lhs = "<leader>Ge", desc = "move focus to changed file panel" },
@@ -136,6 +140,8 @@ return {
           goto_file = { lhs = "gf", desc = "go to file" },
         },
         file_panel = {
+          submit_review = { lhs = "<leader>GwS", desc = "submit review" },
+          discard_review = { lhs = "<leader>Gwd", desc = "discard review" },
           next_entry = { lhs = "j", desc = "move to next changed file" },
           prev_entry = { lhs = "k", desc = "move to previous changed file" },
           select_entry = { lhs = "<cr>", desc = "show selected changed file diffs" },
@@ -165,10 +171,7 @@ return {
       -- Pull requests
       { "<leader>GpC", "<cmd>Octo pr checks<CR>", desc = "show checks" },
       -- Review
-      { "<leader>Gws", "<cmd>Octo review start<CR>", desc = "start review" },
-      { "<leader>Gwp", "<cmd>Octo review resume<CR>", desc = "resume review" },
       { "<leader>Gwq", "<cmd>Octo review close<CR>", desc = "close review" },
-      { "<leader>GwS", "<cmd>Octo review submit<CR>", desc = "submit review" },
       {
         "<leader>G<space>",
         function()
