@@ -108,6 +108,7 @@ echo "Installing Docker and docker-compose..."
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
 export PATH=$HOME/.local/bin:$PATH
 
 echo "Installing nvm..."
