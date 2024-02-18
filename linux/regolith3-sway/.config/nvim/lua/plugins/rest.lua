@@ -1,27 +1,26 @@
 local wk = require("which-key")
 wk.register({
   ["<leader>"] = {
-    R = { name = "HTTP client" },
+    H = { name = "HTTP client" },
   },
 })
 
 return {
   {
     "rest-nvim/rest.nvim",
+    lazy = true,
     dependencies = { { "nvim-lua/plenary.nvim" } },
-    config = function()
-      require("rest-nvim").setup({
-        skip_ssl_verification = true,
-      })
-    end,
+    opts = {
+      skip_ssl_verification = true,
+    },
     keys = {
       {
-        "<leader>Rr",
+        "<leader>Hr",
         "<Plug>RestNvim",
         desc = "Run current HTTP request",
       },
       {
-        "<leader>Rl",
+        "<leader>Hl",
         "<Plug>RestNvimLast",
         desc = "Re-run last HTTP request",
       },
