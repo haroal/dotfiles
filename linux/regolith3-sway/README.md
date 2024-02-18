@@ -27,5 +27,6 @@ Regolith is a Linux distribution based on Ubuntu which directly embeds sway (i3w
 2. Install `tmux` from sources (on GitHub)
 3. Install `lazygit` from sources (on GitHub)
 4. Install `lazydocker` from sources (on GitHub)
-5. Copy `.config/nvim` folder from this repository
-6. Install GitHub CLI (for octo.nvim plugin)
+5. Install `difft` by downloading the binary from GitHub official repository
+6. Copy `.config/nvim` folder from this repository
+7. Install GitHub CLI (for octo.nvim plugin)
