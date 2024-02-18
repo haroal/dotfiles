@@ -28,6 +28,7 @@ sudo apt remove regolith-wm-networkmanager regolith-wm-next-workspace xdg-deskto
 
 echo "Installing utils..."
 sudo apt install \
+	bat \
 	curl \
 	clang \
 	copyq \
