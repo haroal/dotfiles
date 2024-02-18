@@ -6,7 +6,8 @@ wm.bar.position: top
 wm.bar.separatorchar: ""
 wm.bar.status_config: /home/aanneix/.config/regolith3/i3status-rust/config.toml
 # i3-gaps
-wm.gaps.focus_follows_mouse: yes
+wm.gaps.focus_follows_mouse: no
 # Custom bindings
 wm.binding.settings: s
 wm.binding.reload: Ctrl+Shift+c
+wm.binding.split_h: g

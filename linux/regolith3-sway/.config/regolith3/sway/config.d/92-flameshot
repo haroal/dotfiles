@@ -1,2 +1,5 @@
 ## Screenshot with Flameshot
 bindsym $mod+Print exec /usr/bin/flameshot gui
+
+exec --no-startup-id systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
