@@ -10,11 +10,12 @@ local register_custom_problem_matchers = function()
 
   problem_matcher.register_pattern("$pytest-django-pattern", {
     {
-      regexp = "^([a-zA-Z0-9\\/_\\-\\.]+):(\\d+): in (.+)$",
+      regexp = "^([a-zA-Z0-9\\/_\\-\\.]+):(\\d+): in (test.+)$",
       kind = "location",
       file = 1,
       line = 2,
       message = 3,
+      append = true,
     },
     {
       regexp = "^([^-_=].*)$",

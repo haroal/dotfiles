@@ -63,31 +63,4 @@ M.get_task_opts = function(defn)
   }
 end
 
--- Important: this pattern assume pytest is run with `--tb=short`
-M.problem_patterns = {
-  ["$pytest-django-pattern"] = {
-    {
-      regexp = "^([a-zA-Z0-9\\/_\\-\\.]+):(\\d+): in (.+)$",
-      kind = "location",
-      file = 1,
-      line = 2,
-      message = 3,
-    },
-    {
-      regexp = "^([^-_=].*)$",
-      message = 1,
-      loop = true,
-    },
-  },
-}
-
-M.problem_matchers = {
-  ["$pytest-django"] = {
-    owner = "python",
-    source = "python",
-    fileLocation = { "relative", "${cwd}" },
-    pattern = "$pytest-django-pattern",
-  },
-}
-
 return M
