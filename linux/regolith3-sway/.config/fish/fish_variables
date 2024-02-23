@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BC_ENV_ARGS:/home/aanneix/\x2ebc
-SETUVAR --export FURY_AUTH:icDak\x5cx2d5VK8ULHapg7V9iHwlwyvfFOuuRw
 SETUVAR --export --path RIPGREP_CONFIG_PATH:/home/aanneix/\x2eripgreprc
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
